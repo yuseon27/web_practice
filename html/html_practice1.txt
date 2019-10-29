@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> text </title>
+</head>
+<body>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+
+    <p>hello nice to meet you<br>
+       how to return the line<br>
+       now enter?<br>
+    </p>
+    <pre>hello nice to meet you
+how to return the line<br>
+now enter?
+    </pre>
+
+    <p>This is common sentence</p>
+    <p><strong>This is strong sentence</strong></p>
+    <p>This is <strong>common</strong> sentence</p>
+    <p>This is <em>emphasized</em> word</p>
+
+    <p>log<sub>10</sub>4</p>
+    <p>e<sup>2</sup></p>
+
+    <p>I live to <ins>eat</ins></p>
+    <p>I eat to <del>live</del></p>
+</body>
+</html>
