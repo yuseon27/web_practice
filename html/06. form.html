@@ -1,0 +1,41 @@
+<!-- -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> form tag </title>
+    </head>
+    <body>
+        <h2>회원가입</h2>
+        <form action="my-page" method="get">
+            <!-- action : 데이터를 보낼 URL 지정 -->
+            <!-- method : 보내는 방식 -->
+            <!-- => get : 데이터를 url 끝에 붙여 눈에 보이게 보냄, 데이터 조회 목적 -->
+            <!-- => post : 데이터를 message의 body 부분에 숨겨서 보냄, 데이터 수정 삭제 목적-->
+            <!-- Result URL = https://www.practiceboard.com/my-page?id=snow -->
+
+            <!-- input tag의 속성 값 -->
+            <!-- type : 빈칸에 들어가는 것의 형태-->
+            <!-- name : 아이디/키 -->
+            <!-- placeholder : 회색 안내문 -->
+            <!-- value : 초기값 -->
+
+            <!-- label tag를 클릭하면 input을 넣을 수 있도록 화살표가 깜빡임 -->
+
+            
+            <label for="user_id">아이디</label>
+            <input type="text" id="user_id" name="id" placeholder="아이디를 입력하세요" value="snow">
+            <label for="user_pwd">비밀번호</label>
+            <input type="password" id="user_pwd" name="password" placeholder="비밀번호를 입력하세요">
+
+            <div>
+                <label for="user_id">아이디</label>
+                <input type="text" id="user_id" name="id" placeholder="아이디를 입력하세요" value="snow">
+            </div>
+            <div>
+                <label for="user_pwd">비밀번호</label>
+                <input type="password" id="user_pwd" name="password" placeholder="비밀번호를 입력하세요">
+            </div>
+        </form>
+    </body>
+</html>
