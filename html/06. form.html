@@ -22,19 +22,49 @@
 
             <!-- label tag를 클릭하면 input을 넣을 수 있도록 화살표가 깜빡임 -->
 
-            
+
+
             <label for="user_id">아이디</label>
             <input type="text" id="user_id" name="id" placeholder="아이디를 입력하세요" value="snow">
             <label for="user_pwd">비밀번호</label>
             <input type="password" id="user_pwd" name="password" placeholder="비밀번호를 입력하세요">
-
+            <br>
             <div>
-                <label for="user_id">아이디</label>
+                <label for="user_id">아이디 : </label>
                 <input type="text" id="user_id" name="id" placeholder="아이디를 입력하세요" value="snow">
             </div>
             <div>
-                <label for="user_pwd">비밀번호</label>
+                <label for="user_pwd">비밀번호 : </label>
                 <input type="password" id="user_pwd" name="password" placeholder="비밀번호를 입력하세요">
+            </div>
+            <div>
+                <label for="gender">성별 : </label>
+                <select name="gender" id="gender">
+                    <!-- name은 input 태그의 name과 같은 역할 -->
+                    <!-- option 태그는 value라는 속성을 반드시 가져야 함 -->
+                    <!-- select tag의 name과 option tag의 value가 짝을 이룸 -->
+                    <!-- cf)input tag에서는 name과 value가 짝을 이룸 -->
+
+                    <option value="male">남성</option>
+                    <option value="female">여성</option>
+                </select>
+            </div>
+            <div>
+                <label for="job">직업 : </label>
+                <select name="job" id="job">
+                    <option value="student">학생</option>
+                    <option value="teacher">선생님</option>
+                    <option value="etc">기타</option>
+                </select>
+            </div>
+            <div>
+                <label for="introduce">자기소개 : </label>
+                <textarea name="introduce" id="introduce" cols="30" rows="10" placeholder="자기소개를 입력하세요.">여기는 초기값입니당</textarea>
+            </div>
+            <div>
+                <!-- <input type="button" value=""회원가입> == <button type="submit">회원가입</button>-->
+                <button type="submit">제출</button>
+                <button type="reset">리셋</button>
             </div>
         </form>
     </body>
