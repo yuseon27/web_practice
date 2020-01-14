@@ -1,0 +1,44 @@
+<!--
+* 선택자의 종류
+** 단순 선택자
+(1) 타입(Type) - 해당 tag를 가지는 모든 요소에 스타일 적용
+    ex) 선택자 {color:red;}
+(2) 클래스(Class) - 클래스 이름으로 스타일 모두 적용. (그룹화)
+    class : 비슷한 특징을 갖는 요소를 지정하여 묶을 수 있음. 중복 사용 가)
+    ex) .클래스이름 {color:red;}
+(3) 아이디(ID) - 아이디로 스타일 적용. 유니크한 해당 아이디 하나에 적용
+    ex) #아이디 {color:red}
+(4) 전체(Universal) - 모든 요소에 스타일을 적용 (속도 저하 가능성->사용 비추)
+    ex) * {color:red}
+(5) 속성(Attribute) - 특정 속성을 소유하는 모든 요소에 스타일 적용
+    ex) 선택자[속성명="속성값"]{color:red;}
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> basic selector </title>
+        <style>
+            <!-- * {color : black}    universal selector -->
+            p {color:red;}    <!-- type selector -->
+            h2 {color:blue;}
+            #snow {background-color:yellow;} <!-- id selector -->
+            .contents {font-size: 24px;}     <!-- class selector -->
+            a[target="_blank"] {color:red;}  <!-- attribute selector -->   
+        </style>
+    </head>
+    <body>
+        <h1>큰 헤드</h1>
+        <p>첫번째 단락</p>
+        <h2 id="snow">작은헤드</h2>
+        <p class="contents">두번째 단락</p>
+        <h2>2nd작은헤드</h2>
+        <p class="contents">세번째 단락</p>
+
+        <a href="https://www.google.com/" target="_self">구글 현재창</a>
+        <a href="https://www.google.com/" target="_blank" id="newLink">구글 새 창</a>
+        <a href="https://www.google.com/" target="_self">구글 현재창</a>
+        <a href="https://www.google.com/" target="_self">구글 현재창</a>
+    </body>
+</html>
