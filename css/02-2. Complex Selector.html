@@ -1,0 +1,29 @@
+<!-- 복합 선택자
+* 자식 선택자(Child Selector) : 선택자A의 모든 자식 중 선택자B와 일치하는 요소 선택 
+  ex) selectorA > selectorB {color:red;}
+* 후손 선택자(Descendant Selector) : 선택자A의 모든 후손 중 선택자B와 일치하는 요소 선택
+  ex) selectorA selectorB {color:blue;}
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> complex selector </title>
+        <style>
+            article > p {color:red}    <!-- Child Selector -->
+            article p {color:blue}     <!-- Descendant Selector>
+        </style>
+    </head>
+    <body>
+        <article>
+            <div>child1
+                <p>후손1</p>
+            </div>
+            <div>child2
+                <p>후손1</p>
+            </div>
+            <p>child3</p>
+        </article>
+    </body>
+</html>
