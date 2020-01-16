@@ -1,0 +1,28 @@
+<!--
+pseudo class (가상 클래스) : 요소의 특별한 상태를 지정할 때 사용
+  ex) selector:pseudo-class {
+         attribute:value;
+       }
+
+Types of pseudo class
+* link : 방문한 기록이 없음(파랑)
+* visited : 방문하 기록이 있다(보라)
+* hover : 요소에 마우스가 올라와 있을 경우
+-->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> pseudo class selector </title>
+        <style>
+            a:link {color:yellow;}
+            a:visited {color:green;}
+            a:hover {background-color:blue;}
+        </style>
+    </head>
+    <body>
+        <a href="https://www.google.com">구글</a>
+    </body>
+</html>
