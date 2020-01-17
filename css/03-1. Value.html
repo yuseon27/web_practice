@@ -1,0 +1,58 @@
+<!--
+값과 단위
+* 값의 종류
+* 숫자 값 : px(pixel - 절대적 길이, default=16px),
+              em(현재 스타일이 지정된 요소의 font-size 기준, 상대적 길이-권장x),
+              rem(최상위 요소의 font-size 기준, 상대적 길이, 권장)
+                -> Xem(rem)의 크기 = 기준 font-size * Xem(Xrem)
+
+* 백분율 : %(퍼센트) - 상대 길이, 보통 이미지, 레이아웃의 너비나 높이를 지정할 때 씀
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> value and unit </title>
+        <style>
+            #html{
+                background-color:yellow;
+                font-size:32px;
+            }     
+            #main{
+                background-color:bisque;
+                width:75%;
+            }
+            #per{
+                background-color:blue;
+                width:50%
+            }
+            #px{
+                background-color:red;
+                width:16px;
+                height:16px;
+            }
+            #em{
+                background-color:blue;
+                width:1em;
+                height:2em;
+                font-size:24px
+
+            }
+            #rem{
+                background-color:green;
+                width:1rem;
+                height:1rem;
+            }     
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            단위
+            <div id="per">percent</div>
+        </div>
+        <div id="px">px</div>
+        <div id="em">em</div>
+        <div id="rem">rem</div>
+    </body>
+</html>
