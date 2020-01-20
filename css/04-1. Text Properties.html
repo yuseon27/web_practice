@@ -1,0 +1,40 @@
+<!--
+Font-related Properties
+* font-size
+* font-family : 폰트의 종류
+    폰트 여러개 지정하여 처음이 없으면 다음 폰트가 실행되도록 함 
+    ex) 'Cute Font', Arial, cursive;
+    웹 폰트로 폰트를 불러 올 수 있음
+* font-style : normal, italic(이태리 체가 적용된 것에서 사용), oblique(기울이기)
+* font-weight : 폰트 굵기 / bold, 100~900 / normal : 400, bold : 700
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> font </title>
+        <!-- web font -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+        <style>
+            #main {
+                font-family: 'Noto Sans', sans-serif;
+                font-style:italic;
+                font-weight:900;
+                font-size:35px;
+            }
+            #all {
+                font : oblique 900 20px 'Noto Sans', sans-serif;  <!-- 띄어쓰기로 구분 -->
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            Hello, this is font Noto Sans! Nice to meet you
+        </div>
+        <div id="all">
+            Hello this is testing all the properties of font
+        </div>
+
+    </body>
+</html>
