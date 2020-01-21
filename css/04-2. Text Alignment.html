@@ -1,0 +1,59 @@
+<!--
+Text Alignment
+* text-align : 텍스트를 좌, 우, 중앙 정렬 (left, right, center)
+  본인의 width를 기준으로 좌우 정렬
+
+* line-height : 문장 사이의 간격을 조정함
+  px 가능, 단위x - 해당 폰트 사이즈의 배수 크기
+
+* letter-spacing : 자간
+* text-indent : 문단의 시작부에 들여쓰기
+-->  
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> text alignment </title>
+        <style>
+            h1 {
+                text-align:center;
+                background-color:pink;
+            }
+            h3 {
+                text-align:left;
+                background-color:yellowgreen;
+            }
+            h2 {
+                text-align:right;
+                background-color:royalblue;
+            }
+            #align {width:50%;}
+
+            #up {
+                line-height : normal;
+                background-color:skyblue;
+                text-indent : 30px;
+            }
+            #down {
+                font-size : 20px;
+                line-height : 2;
+                background-color:pink;
+                letter-spacing : 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="align">
+            <h1>It's in the center!</h1>
+            <h3>It's in the left!</h3>
+            <h2>It's in the right!</h2>
+        </div>
+        <br>
+        <div id="height">
+            <p id="up">A list of all ANY words with their Scrabble and Words with Friends points. You can also find a list of all words that start with ANY. Also commonly searched for are words that end in ANY.</p>
+            <p id="down">A list of all ANY words with their Scrabble and Words with Friends points. You can also find a list of all words that start with ANY. Also commonly searched for are words that end in ANY.</p>
+        </div>
+    </body>
+</html>
