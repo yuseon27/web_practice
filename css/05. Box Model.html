@@ -1,0 +1,105 @@
+<!--
+Box Model
+ - 내용(Content), 경계선(Border), 패딩(Padding), 마진(Margin)
+
+* Content
+  width, height를 적용하면 content의 크기를 기준으로 함  
+
+* Border
+  Properties
+  - border-style : dashed solid dotted double
+  - border-width : px
+  - border-color
+  - border-radius : 경계선을 둥글게 할 수 O, 모든 꼭짓점 다르게 둥글게 할 수 O
+    border-top-left-radius : 30px 10px  => 타원형으로 둥글게
+    border-radius : 30px 20px 10px 0 / 0 10px 20px 30px => 한번에 작성하고자 할 때는 '/'를 사용하여 작성 
+    -> 1개 쓰면 4변 모두, 2개 쓰면 상하/좌우, 3개 쓰면 상/좌우/하, 4개 쓰면 상/우/하/좌
+    -> border : 4px solid green 과 같이 한꺼번에 쓸 수도 있음
+
+* Padding : Content와 Border 사이 여백
+  배경의 범위는 Border 안 쪽에 있는 Padding까지 포함
+
+* Margin : Border 밖의 여백
+  마진 상쇄(Margin Collapse) : 위 아래 다른 요소(<div>)에서 마진을 적용하면 둘 중 큰 값만 적용됨
+ 
+Padding과 Margin 모두 4방향을 따로 적용할 수 있음
+
+* Box-sizing
+  box-sizing : content-box; (default, only content-size), 
+                  border-box; (content-size+padding+border) 
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Box Model </title>
+        <style>
+            body {background-color:skyblue;}
+            #inner{
+                width:200px;
+                height:100px;
+                background-color:pink;
+                margin:20px;
+                padding:20px;
+
+                border : 4px solid lemonchiffon;
+                border-radius : 12px;
+                <!-- border-style: dashed solid dotted double; -->
+                <!-- border-width:4px  6px 8px 10px; -->
+                <!-- border-color:red blue yellow green; -->
+                <!-- border-radius : 30px 20px 10px 0 / 0 10px 20px 30px; -->
+                
+                overflow:hidden;  <!-- hidden : Box 넘어가는 Content 안 보이게, scroll : Scroll 생김 -->
+            }
+            #top {
+                width:200px;
+                height:100px;
+                background-color:pink;
+                padding:20px;
+                margin:50px;
+            }
+            #bottom {
+                width:200px;
+                height:100px;
+                background-color:lemonchiffon;
+                padding:20px;
+                margin:20px;
+            }
+            #content_box {
+                width:200px;
+                height:100px;
+                background-color:pink;
+                box-sizing: content-box;
+                padding:20px;
+            }
+            #border_box {
+                width:200px;
+                height:100px;
+                background-color:lemonchiffon;
+                box-sizing: border-box;
+                padding:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="inner">
+                This is Content!
+            </div>
+            <div id="top">
+                 Top
+            </div>
+            <div id="bottom">
+                Bottom
+            </div>
+            <div id="content_box">
+                Content Box
+            </div>
+            <div id="border_box">
+                Border Box
+            </div>
+        </div>
+    </body>
+</html>
