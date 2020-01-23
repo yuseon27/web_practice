@@ -1,0 +1,54 @@
+<!--
+Properties related to Location
+* Display : 요소가 보여지는 방식 지정
+  (display : block/inline)
+  - block : 새로운 줄에서 시작, default = width 100%
+    ex) div, h1~h6, p, header, section, ...
+    => width, height, margin, padding 가능
+
+  - inline : 새로운 줄에서 시작 X, content의 크기 만큼만 width(너비)를 가짐
+    ex) a, span img, ...
+    => width, height, margin-top, margin-bottom 불가능
+
+  - inline-block : block과 inline의 성격을 모두 가짐
+    => width, height, margin-top, margin-bottom 가능
+
+  - none : display에 출력 X
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Display </title>
+        <style>
+            body {background-color:skyblue;}
+            #block {
+                background-color:pink;
+                width:200px;
+                height:100px;
+                margin:20px;
+                padding:20px;
+                <!-- display: none;  디스플레이에서 출력 X-->
+            }
+            #inline {
+                background-color:lemonchiffon;
+                width:200px;
+                height:100px;
+                margin:20px;
+                padding:20px;
+                display:inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <p id="block">
+                This is block!
+            </p>
+            <span id="inline">
+                This is inline!
+            </span>
+        </div>
+    </body>
+</html>
