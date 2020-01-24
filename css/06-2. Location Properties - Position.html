@@ -1,0 +1,97 @@
+<!--
+Properties related to Location
+* Position
+  - static : default, 좌표 property 사용 불가능
+  - relative : 상대 위치. 기본 위치를 기준으로 좌표 사용
+  - absolute : 부모나 조상 중 relative, absolute, fixed가 선언된 곳을 기준으로 좌표 property 적용
+        width, height를 적용 안하면 text의 크기 만큼의 크기를 갖음. (like inline-block)
+  - fixed : 보이는 화면을 기준으로 좌표 프로퍼티를 이용하여 위치 고정
+
+  - z-index : static이 아닌 요소에서 사용, 층수 높은 숫자가 위로 올라옴
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Position </title>
+        <style>
+            body {
+                background-color:skyblue;
+                margin:0;
+            }
+            #main{height : 200px;}
+            #fixed {
+                background-color:green;
+                width:100px;
+                height:60px;
+                position:fixed;
+                top:0;
+                left:0;
+            }
+            #parent {
+                background-color:pink;
+                width:200px;
+                height:200px;
+                position:relative;
+                top:50px;
+                left:50px;
+            }
+            #child {
+                background-color:lemonchiffon;
+                width:100px;
+                height:100px;
+                position:relative;
+                top:20px;
+                left:20px;
+            }
+            #child2 {
+                background-color:red;;
+                position:absolute;
+                top:20px;
+                left:20px;
+            }
+            #top {
+                background-color:lemonchiffon;
+                width:100px;
+                height:100px;
+                position:absolute;
+                z-index:2;
+            }
+            #bottom {
+                background-color:red;
+                width:100px;
+                height:100px;
+                position:absolute;
+                z-index:1;
+            }
+             
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="fixed">
+                I am Fixed!!
+            </div>
+            Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
+            Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
+        </div>
+        <div id="parent">
+            <div id="child">
+                child
+            </div>
+            <div id="child2">
+                child2
+            </div>
+        </div>
+        <div id="zindex">
+            <div id="top">
+                I am the top
+            </div>
+            <div id="bottom">
+                I am the bottom
+            </div>
+        </div>        
+
+    </body>
+</html>
