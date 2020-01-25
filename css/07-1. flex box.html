@@ -1,0 +1,118 @@
+<!--
+Flexbox
+* 가로/세로 정해둔 방향으로 정렬
+
+* flex container(부모 요소) => display:flex; 추가
+  - flex-direction : flex container 안의 item들의 방향을 정함. row, 왼->오가 default
+  - flex-wrap : flex item이 flex container를 벗어났을 때 줄을 바꾸는 속성, default : nowrap(줄바꿈x) => wrap/nowrap
+  - justify-content : flex-direction으로 정해진 방향을 기준으로 수평으로 item을 정렬하는 방법을 정함
+    ex) flex-start(default), center, flex-end, space-around, space-between
+  - align-items : flex-direction으로 정해진 방향을 기준으로 수직으로 item을 정렬하는 방법을 정함
+    ex) stretch(default), flex-start, flex-end, center, basline
+  - align-content : flex-direction이 정해진 방향을 기준으로 수직으로 여러 줄인 item을 정렬하는 방법을 정함
+    ex) stretch(default), flex-start, flex-end, center, space-around, space-between
+
+* flex item(자식 요소)
+  - flex-grow : flex 아이템의 확장과 관련된 속성, 기본 0 (0과 정수 사용, 단위x)
+  - flex-shrink : flex 아이템의 축소과 관련된 속성, 기본 1 (0과 정수 사용, 단위x)
+  - flex-basis : flex 아이템의 기본 크기를 결정함. 기본 auto, 단위 필수 (px/%)
+  - flex : flex-grow, flex-shrink, flex-basis의 축약형
+
+-->
+
+
+<!-- Properties of Flex Container -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Flex Container </title>
+        <style>
+            body {
+                margin:0;
+            }
+            #container {
+                background-color:skyblue;
+                display:flex;
+                height:250px;
+                width:250px;
+                flex-direction:row;
+                flex-wrap:wrap;
+                align-items:center;
+                align-content:space-between;
+
+                <!-- justify-content:space-between; -->
+                <!-- flex-flow:row wrap  direction과 wrap을 동시에 -->
+
+            }
+            .item {
+                border-radius:4px;
+                background-color:pink;
+                height:36px;
+                width:36px;
+            }
+             
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+        </div>     
+    </body>
+</html>
+
+<!-- Properites of flex-item -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Flex Item </title>
+        <style>
+            body {
+                margin:0;
+            }
+            #container {
+                background-color:skyblue;
+                display:flex;
+                height:250px;
+                width:250px;
+                flex-direction:row;
+            }
+            .item {
+                border-radius:4px;
+                background-color:pink;
+                height:60px;
+                width:60px;
+            }
+
+            #one {
+                flex : 1 1 auto;
+                <!-- flex-basis:10px; -->
+                <!-- flex-shrink : 0; -->
+                <!-- flex-grow : 1; -->
+            }
+
+            #two {
+                flex-shrink : 1;
+            }
+            
+            #three {
+                flex-shrink : 2;
+            }            
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="item" id="one">1</div>
+            <div class="item" id="two">2</div>
+            <div class="item" id="three">3</div>
+        </div>     
+    </body>
+</html>
