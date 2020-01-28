@@ -1,0 +1,52 @@
+<!--
+Inheritance and Priority
+* Inheritence
+https://www.w3.org/TR/CSS21/propidx
+
+* Priority
+Cascading(적용 우선순위) 규칙
+  1. 중요도
+      1) <head>태그 내의 <style>태그
+      2) <head>태그 내의 <style>태그 내의 `@import`문
+      3) <link>태그로 연결된 CSS
+      4) <link>태그로 연결된 CSS 내의 `@import`문
+      5) 브라우저 디폴트 스타일시트
+
+  2. 명시도
+      1) !important`
+      2) inline style - 인라인 스타일
+      3) id selector - 아이디 선택자
+      4) class,attribute,pseudo class selector - 클래스,속성,가상클래스 선택자
+      5) type selector - 태그 선택자
+      6) universal selector - 전체 선택자
+      7) inherit - 상속
+
+  3. 선언 순서 : 나중에 선언된 스타일이 우선 적용
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Inheritance and Priority </title>
+        <>
+        <style>
+            p,div{background-color: black;}
+
+            p { color: red !important; }
+            #id { color: yellow; }
+
+            div.class { color: green; }
+            .class { color: blue; }
+            div { color: purple; }
+
+            * { color: gray; }
+        </style>
+    </head>
+    <body>
+        <p id="id" style="color: orange;">p tag with id</p>
+        <div class="class">div tag with class</div>
+    </body>
+</html>
