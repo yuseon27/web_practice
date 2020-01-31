@@ -1,0 +1,57 @@
+<!--
+Bootstrap - Grid system
+  * 스타일 적용 시 주의점
+  !important,	#id,	div.class	=> 부트 스트랩보다 상위 우선 순위
+  부트스트랩 스타일 적용 방식 : .class
+
+  * Reactive Web 구현 가능
+  .col-lg-4  - 12등분 중 차지할 비율
+       기준이 되는 회면 사이즈
+ -->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Bootstrap </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <style>
+            div.col {
+                background-color:skyblue;
+                border-radius:4px;
+                border : 1px solid pink;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-sm-9 bg-success">col-6 col-sm-9</div>
+                <div class="col-6 col-sm-3 bg-warning">col-6 col-sm-3</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-7 col-lg-8 bg-success">col-7 col-sm-8</div>
+                <div class="col-5 col-lg-4 bg-warning">col-5 col-sm-4</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-md-6 col-lg-4 bg-success">col-sm-3 col-md-6 col-lg-4</div>
+                <div class="col-sm-9 col-md-6 col-lg-8 bg-warning">col-sm-9 col-md-6 col-lg-8</div>
+            </div>
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    </body>
+</html>
