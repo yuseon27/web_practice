@@ -13,5 +13,8 @@ def about(request) : #{
 
 
 def result(request) : #{
-    return render(request, 'result.html')
+    full_text  = request.GET['full_text']
+    count = len(full_text.split())
+    p_dict = {'full_text' : full_text, 'count' : count}
+    return render(request, 'result.html', p_dict)
 #}

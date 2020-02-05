@@ -20,5 +20,6 @@ import WordCountApp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', WordCountApp.views.home, name='home'),
-    path('about/', WordCountApp.views.about, name="about")
+    path('about/', WordCountApp.views.about, name="about"),
+    path('result/', WordCountApp.views.result, name="result"),
 ]
