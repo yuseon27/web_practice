@@ -8,3 +8,9 @@ def home(request) : #{
 
     return render(request, 'home.html', {'blogs' : blogs})    
 #}
+
+# def detail(request, blog_id) : #{
+#     blog_detail = get_object_or_404(Blog, pk=#TODO)
+
+#     return render(request, 'detail.html', {'blog_detail':blog_detail})
+# #}

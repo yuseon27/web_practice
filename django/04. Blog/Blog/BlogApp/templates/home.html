@@ -1,8 +1,9 @@
 <h1> Hello! This is home page. </h1>
 
 {% for blog in blogs.all %}
-    <h1> {{blog.title}} </h1>
-    <p> {{blog.pub_date}} </p>
-    <p> {{blog.body}} </p>
-    <br><br>
-{%endfor%}
+<h1> Title : {{blog.title}} </h1>
+<p> Date  : {{blog.pub_date}} </p>
+<p> Body Preview : {{blog.summary}}
+    <a href=""> ... more </a> 
+</p>
+{% endfor %}
