@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,15 +50,17 @@
             </form>
         </div>
     </nav>
-
     {% for blog in blog_all.all%}
-    <div class="card" style="padding: 5px; margin: 30px;">
-        <div class="card-body">
-            <h2> {{blog.title}} </h2>
-            <p style="size: 10px;"> {{blog.pub_date}} </p>
-            <p> {{blog.preview}} </p>
-            <br>
-            <p><a href="{%url 'detail' blog.id %}"> ...more </a></p>    <!--REMEMBER FORMAT OF URL-->
+    <div class="container">
+        <div class="card" style="padding: 5px; margin: 30px;">
+            <div class="card-body">
+                <h4 class="card-title"> {{blog.title}} </h5 c>
+                <h6 class="card-subtitle mb-2 text-muted"> {{blog.pub_date}} </h6>
+                <p class="card-text"></p> {{blog.preview}} </p>
+                <br>
+                <a href="{%url 'detail' blog.id %}" class="card-link"> ...more </a>
+                <!--REMEMBER FORMAT OF URL-->
+            </div>
         </div>
     </div>
     {% endfor %}
