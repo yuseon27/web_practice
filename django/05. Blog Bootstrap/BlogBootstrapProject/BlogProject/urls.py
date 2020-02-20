@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', BlogApp.views.home, name='home'),
     path('blog/<int:blog_id>', BlogApp.views.detail, name='detail'),
+    path('blog/new/', BlogApp.views.new_memo, name="new"),
+    path('blog/create/', BlogApp.views.create_memo, name="create")
 ]
