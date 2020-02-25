@@ -1,5 +1,6 @@
 {% load static %}
 <!doctype html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,7 +25,7 @@
     <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
 
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -117,6 +118,7 @@
             <div class="container">
 
                 <div class="row">
+
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
                             <img src="{% static 'bg1.jpg'%}" height=300 alt="Background Image">
@@ -133,6 +135,26 @@
                             </div>
                         </div>
                     </div>
+
+                    {% for portfolio in portfolios.all%}
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="{{portfolio.image.url}}" height=300>
+                            <div class="card-body">
+                                <p class="card-text"> {{portfolio.description}} </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
                 </div>
             </div>
         </div>
