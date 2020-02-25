@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 import BlogApp.views
 import PortfolioApp.views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,3 +28,5 @@ urlpatterns = [
     path('blog/create/', BlogApp.views.create_memo, name="create"),
     path('portfolio', PortfolioApp.views.portfolio, name='portfolio'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
