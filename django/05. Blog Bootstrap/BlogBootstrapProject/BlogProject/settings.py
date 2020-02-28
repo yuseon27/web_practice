@@ -56,7 +56,7 @@ ROOT_URLCONF = 'BlogProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['BlogProject/templates'], # Added to notify templates location
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
