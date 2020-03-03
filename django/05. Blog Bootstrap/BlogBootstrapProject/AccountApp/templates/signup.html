@@ -5,6 +5,7 @@
 
 <form method="POST" action={% url 'signup' %}>
     {% csrf_token %}
+    
     Username :
     <br>
     <input name="username" type="text" value="">
