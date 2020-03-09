@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from django.core.paginator import Paginator
 from .models import Blog
+from .blog_form import BlogPost
+from .form import AnyPost
 
 # Create your views here.
 def home(request) : #{
@@ -39,4 +41,48 @@ def create_memo(request) : #{
     blog.save()
 
     return redirect(f'/blog/{blog.id}')
+#}
+
+def blogpost(request) : #{
+    # 1. Process input   -> POST
+    if request.method == "POST" : #{
+        form = BlogPost(request.POST)
+        if form.is_valid() : #{
+            post = form.save(commit=False)
+            post.pub_date = timezone.now()
+            post.save()
+
+            return redirect('home')
+        #}
+
+    #}
+    
+    # 2. Show empty page => GET
+    else : #{
+        form = BlogPost()
+        return render(request, 'new.html', {'form':form})
+    #}
+      
+#}
+
+def anypost(request) : #{
+    # 1. Process input   -> POST
+    if request.method == "POST" : #{
+        form = AnyPost(request.POST)
+        if form.is_valid() : #{
+            post = form.save(commit=False)
+            post.pub_date = timezone.now()
+            post.save()
+
+            return redirect('home')
+        #}
+
+    #}
+    
+    # 2. Show empty page => GET
+    else : #{
+        form = AnyPost()
+        return render(request, 'new.html', {'form':form})
+    #}
+      
 #}

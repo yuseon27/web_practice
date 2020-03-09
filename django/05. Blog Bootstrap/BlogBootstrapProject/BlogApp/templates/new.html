@@ -2,6 +2,23 @@
 
 {% block contents %}
 
+<br>
+
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            <!-- {{form}} -->
+            {{form.as_table}}
+        </table>
+        <br>
+        <input class="btn btn-dark" type="submit" value="Submit">
+    </form>
+
+</div>
+
+
+<!-- 
 <body>
     <div class="container">
         <form action="{% url 'create' %}">
@@ -14,6 +31,6 @@
             <input class="btn btn-dark" type="submit" value="Register">
         </form>
     </div>
-</body>
+</body> -->
 
 {% endblock %}
