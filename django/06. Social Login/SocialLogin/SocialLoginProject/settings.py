@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'SocialLoginApp.apps.SocialloginappConfig',
+    'ThumbnailApp.apps.ThumbnailappConfig',
 
     
     # allauth
@@ -48,6 +49,9 @@ INSTALLED_APPS = [
 
     # provider => google, facebook, kakao, github, ...
     'allauth.socialaccount.providers.google',
+
+    # Thumbnail
+    'imagekit'
 ]
 
 MIDDLEWARE = [
@@ -129,9 +133,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+# For Media
+MEDIA_URL  = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
+# For social Login
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of 'allauth'
     'django.contrib.auth.backends.ModelBackend',
@@ -143,3 +151,4 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
+
