@@ -1,0 +1,7 @@
+{% for pic in pictures.all %}
+<img src="{{pic.image.url}}" width="500">
+<br>
+{{pic.text}}
+<br><br>
+<img src="{{pic.image_thumbnail.url}}">
+{% endfor %}
